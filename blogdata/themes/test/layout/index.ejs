@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<% site.posts.each(function(post,i){ %>
+			<% if( i<config.index_generator.per_page ){ %>
+				<div style="margin-top:20px;"><%= post.excerpt %><% document.write(i) %></div>
+			<% } %>
+		<% }) %>
+	</body>
+</hmtl>

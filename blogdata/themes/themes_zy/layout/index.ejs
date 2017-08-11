@@ -1,21 +1,22 @@
 <html>
   <body>
-  	<%- partial('_partial/slide') %>
+  	<%- css('css/index.css') %>
     <section class="posts">
-	  <% page.posts.each(function (post) { %>
-	    <article class="post">
-	      <div class="post-title">
-	        <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
-	      </div>
-	      <div class="post-content">
-	        <%- post.content %>
-
-	      </div>
-	      <div class="post-meta">
-	        <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
-	      </div>
-	    </article>
+      <%- partial('_partial/slide')  %>
+	  <% site.posts.each(function (post,i) { %>
+	     <% if( config.index_generator.per_page > 0 ){ %>
+	     	<% if( i < config.index_generator.per_page ) {%>
+	     		<%- partial('_partial/post_main',{post: post})  %>
+	     	<% } %>
+	     <% }else{ %>
+	     	<%- partial('_partial/post_main',{post: post})  %> 
+	     <% } %>
 	  <% }) %>
-</section>
+
+	  	<div class="pagination">
+		    <%- paginator({prev_text: "上一页", next_text: "下一页"}); %>
+		</div>
+	</section>
+	
   </body>
 </html>
