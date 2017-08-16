@@ -1,22 +1,24 @@
-<html>
-  <body>
-  	<%- css('css/index.css') %>
-    <section class="posts">
-      <%- partial('_partial/slide')  %>
-	  <% site.posts.each(function (post,i) { %>
-	     <% if( config.index_generator.per_page > 0 ){ %>
-	     	<% if( i < config.index_generator.per_page ) {%>
-	     		<%- partial('_partial/post_main',{post: post})  %>
-	     	<% } %>
-	     <% }else{ %>
-	     	<%- partial('_partial/post_main',{post: post})  %> 
-	     <% } %>
-	  <% }) %>
-
-	  	<div class="pagination">
+<%- css('css/index.css') %>
+<%- css('font/iconfont.css') %>
+<section class="container-fluid">
+	<div class="row">
+	 <%- partial('_partial/slide.ejs')  %>
+	  <div class="posts col-md-8">
+		<% site.posts.each(function (post,i) { %>
+		     <% if( config.index_generator.per_page > 0 ){ %>
+		     	<% if( i < config.index_generator.per_page ) {%>
+		     		<%- partial('_partial/post_main',{post: post})  %>
+		     	<% } %>
+		     <% }else{ %>
+		     	<%- partial('_partial/post_main',{post: post})  %> 
+		     <% } %>
+		  <% }) %>
+		  <div class="pagination">
 		    <%- paginator({prev_text: "上一页", next_text: "下一页"}); %>
 		</div>
-	</section>
-	
-  </body>
-</html>
+	  </div>
+	  	 <%- partial('_partial/list.ejs')  %>
+	</div>
+ 
+</section>
+<%- js('js/index.js') %>

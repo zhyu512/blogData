@@ -1,9 +1,9 @@
 .slide
-	position fixed
+	/*position fixed
 	height 100%
 	left 0
 	top 0
-	width 360px
+	width 360px*/
 	background slideBg
 
 .avatar_img
@@ -23,18 +23,41 @@
 	width linkMenuWid
 	margin avatorBot auto 0
 
-.homeIco
-	width 50px 
-	height 50px
-	background #fff
-	margin 0 auto
 
+
+.iconfont.icon-mulu
+	font-size fs32
+	color cwhite
+	text-align center
+	cursor pointer
+
+.linkList
+	position relative
+	margin-top mt30
+	display none
+.linkListJt
+	position absolute
+	display block 
+	width 0
+	height 0
+	top -(linkListJtSize)
+	left 50%
+	margin-left -(linkListJtSize/2)
+	border-top none
+	border-left solid linkListJtSize transparent
+	border-right solid linkListJtSize transparent
+	border-bottom solid linkListJtSize linkMenuBg
 .linkList ul
 	width linkMenuWid
 	padding p20 0	
 	background linkMenuBg
 	text-align center
 
+.linkList li
+	line-height lh30
 .linkList ul a
 	color cwhite
+	text-decoration none
+
+
 	

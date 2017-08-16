@@ -40,4 +40,4 @@ fb_admins:
 fb_app_id:
 
 # editer
-avatar: images/avatar.png
+avatar: /images/avatar.png
