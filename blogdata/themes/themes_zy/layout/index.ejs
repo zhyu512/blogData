@@ -3,7 +3,7 @@
 <section class="container-fluid">
 	<div class="row">
 	 <%- partial('_partial/slide.ejs')  %>
-	  <div class="posts col-md-8">
+	  <div class="posts col-md-10">
 		<% site.posts.each(function (post,i) { %>
 		     <% if( config.index_generator.per_page > 0 ){ %>
 		     	<% if( i < config.index_generator.per_page ) {%>
@@ -17,7 +17,6 @@
 		    <%- paginator({prev_text: "上一页", next_text: "下一页"}); %>
 		</div>
 	  </div>
-	  	 <%- partial('_partial/list.ejs')  %>
 	</div>
  
 </section>

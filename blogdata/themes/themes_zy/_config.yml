@@ -1,9 +1,9 @@
 # Header
 menu:
   主页: /
-  分类: /
-  列表: /
-  标签: /
+  分类: /category
+  列表: /archive
+  标签: /tag
   友链: http://blog.wangbinzhou.com
 
 rss: /atom.xml
@@ -41,3 +41,7 @@ fb_app_id:
 
 # editer
 avatar: /images/avatar.png
+
+#index ListNum
+catNum: 6
+postNum: 6

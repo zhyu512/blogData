@@ -1,10 +1,13 @@
 
 fm = Microsoft yahei,arial;
 
-/*w1200 = 1200px;*/
+/*w1200 = 80%;*/
+slideW = 15%;
 paginWid = 34px;
 avatorWid = 148px;
 linkMenuWid = 134px;
+
+h150 = 150px;
 
 bors1 = solid 1px;
 
@@ -28,13 +31,16 @@ fs32 = 32px;
 
 lh20 = 20px;
 lh30 = 30px;
+lh40 = 40px;
+
+
 
 fr = right;
 
 cwhite = #dddbdb;
 bgBlack = #212121;
 slideBg = #343434;
-
+activeCol = #80abd6;
 
 boxSha = 2px 2px 10px #101010;
 
@@ -48,6 +54,8 @@ linkListJtSize = 7px;
 body
 	background #1d1d1d
 	font-family fm
+html,body
+	height 100%
 
 li
 	list-style none
@@ -64,8 +72,14 @@ box-shadow()
 	-moz-box-shadow arguments
 	box-shadow arguments
 
+.h150
+	height h150
 
-
-
+.bgblack
+	background bgBlack
+.cwhite
+	color cwhite
 @import "slide";
+@import "list";
+
 

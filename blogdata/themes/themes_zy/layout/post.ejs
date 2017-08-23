@@ -1,8 +1,21 @@
+<%- css('css/post') %>
+<%- css('font/iconfont.css') %>
 <head>
     <title><%- page.title %></title>
 </head>
-<body>
-	<%- page.title %>
-<hr>
-	<%- page.content %>
+<body class="bgblack cwhite">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="post col-md-8">
+				<h2><%- page.title %></h2>
+				<p><span><%- page.updated.format("L") %></span><span class=""><%- config.author %></span></p>
+				<%- page.content %>
+			</div>
+			<div class="col-md-4">
+				
+			</div>
+		</div>
+		
+	</div>
+	
 </body>

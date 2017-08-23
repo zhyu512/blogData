@@ -1,28 +1,13 @@
-.slide
-	/*position fixed
-	height 100%
-	left 0
-	top 0
-	width 360px*/
-	background slideBg
 
 .avatar_img
 	display block
 	width avatorWid
 	height @width
 	border-radius @width
-	margin avatorTop auto avatorBot
-	margin-top avatorTop
-
 .avatar_name
 	text-align center
 	font-size fs24
 	color cwhite
-
-.linkMenu
-	width linkMenuWid
-	margin avatorBot auto 0
-
 
 
 .iconfont.icon-mulu
@@ -33,8 +18,8 @@
 
 .linkList
 	position relative
-	margin-top mt30
 	display none
+
 .linkListJt
 	position absolute
 	display block 
@@ -47,6 +32,7 @@
 	border-left solid linkListJtSize transparent
 	border-right solid linkListJtSize transparent
 	border-bottom solid linkListJtSize linkMenuBg
+
 .linkList ul
 	width linkMenuWid
 	padding p20 0	
@@ -55,9 +41,70 @@
 
 .linkList li
 	line-height lh30
+
 .linkList ul a
 	color cwhite
 	text-decoration none
 
+.linkList ul a:link
+	color activeCol
 
-	
+
+.slide
+	/*height 100%*/
+	width slideW
+	background slideBg
+	height 100vh
+
+.slide .avatar_img
+	margin 0 auto avatorBot
+	margin-top 25vh
+	width 70%
+	height @width
+	border-radius @width 
+
+.slide .linkMenu
+	width linkMenuWid
+	margin avatorBot auto 0
+
+.slide .linkList
+	margin-top mt30
+
+
+.slide_phone
+	background slideBg
+	padding 5vh 0
+	overflow hidden
+
+.slide_phone .avatar
+	margin-left 5vw
+	float left
+.slide_phone .avatar_img
+	width 8rem
+	height @width
+	border-radius @width	 
+.slide_phone .avatar_name
+	padding-top p20
+	font-size fs18
+
+.slide_phone .linkMenu
+	float right
+	margin 5vh 5vw 0 0
+	position relative
+
+.slide_phone .iconfont.icon-mulu,.slide_phone .linkList
+	float left
+
+.slide_phone .linkList
+	position absolute
+	top -7vh
+	right fs32+15px
+	display block
+
+.slide_phone .linkListJt
+	left 99.5%+(linkListJtSize/2)
+	top 8.5vh
+	border-top solid linkListJtSize transparent
+	border-left solid linkListJtSize linkMenuBg
+	border-right none
+	border-bottom solid linkListJtSize transparent

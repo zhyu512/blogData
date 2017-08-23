@@ -1,4 +1,4 @@
-<section class="slide hidden-xs col-md-2" style="display:block">
+<section class="slide col-md-2 hidden-xs hidden-sm">
 	<div class="avatar">
 		<img class="avatar_img" src="<%= theme.avatar%>" />
 		<p class="avatar_name"><%= config.author %></p>
@@ -10,5 +10,17 @@
 			<%- partial("menu") %>
 		</div>
 	</div>
-
-</section>                       
+</section>  
+<section class="slide_phone visible-xs-block visible-sm-block"> 
+	<div class="avatar">
+		<img class="avatar_img" src="<%= theme.avatar%>" />
+		<p class="avatar_name"><%= config.author %></p>
+	</div>
+	<div class="linkMenu">
+		<div class="linkList">
+			<i class="linkListJt"></i>
+			<%- partial("menu") %>
+		</div>
+		<div class="iconfont icon-mulu"></div>
+	</div>
+</section>                     
